@@ -1,0 +1,178 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* رأس الصفحة */
+header {
+    background: linear-gradient(90deg, #56ccf2, #2f80ed);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+}
+
+header .theme-toggle button {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+header .theme-toggle button:hover {
+    background-color: white;
+    color: #2f80ed;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+    background-color: #2f80ed;
+    color: white;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #ffe600;
+}
+
+/* المحتوى الرئيسي */
+main {
+    margin-left: 270px;
+    padding: 40px 20px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #2f80ed;
+}
+
+a {
+    color: #2f80ed;
+}
+
+a:hover {
+    color: #ffe600;
+}
+
+/* الأسئلة الشائعة */
+details {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* المراجعات */
+.testimonial {
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* الوضع الداكن */
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode header {
+    background: linear-gradient(90deg, #1d1d1d, #333);
+}
+
+.dark-mode .sidebar {
+    background-color: #333;
+}
+
+.dark-mode section {
+    background-color: #444;
+}
+
+/* شريط التقدم */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6600, #ff9900);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+/* تحسين الأداء على الهواتف */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 200px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
